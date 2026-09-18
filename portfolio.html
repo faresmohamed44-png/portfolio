@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fares Helal — AI & Automation Specialist</title>
+<meta name="description" content="Fares Mohamed Helal — AI & Automation Specialist. Marketing graduate building intelligent automation systems, n8n pipelines, prompt engineering, and computer vision solutions for freelancers and micro-businesses." />
+<meta name="author" content="Fares Mohamed Helal" />
+<meta property="og:title" content="Fares Helal — AI & Automation Specialist" />
+<meta property="og:description" content="AI & Automation Specialist building intelligent workflows, n8n pipelines, and computer vision systems that deliver real business results." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Fares Helal — AI & Automation Specialist" />
+<meta name="twitter:description" content="AI & Automation Specialist building intelligent workflows, n8n pipelines, and computer vision systems." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:#0a0e1a;
+  color:#e5e7eb;
+  line-height:1.6;
+  overflow-x:hidden;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(59,130,246,0.06) 1px,transparent 1px);
+  background-size:60px 60px;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.gradient-text{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4,#8b5cf6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(10,14,26,0.85);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(59,130,246,0.15);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700}
+.nav-links{display:flex;gap:32px;align-items:center;font-size:.9rem;font-weight:500;color:#9ca3af}
+.nav-links a:hover{color:#fff;transition:.3s}
+.nav-cta{
+  padding:10px 22px;border-radius:999px;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  color:#fff;font-weight:600;font-size:.85rem;transition:.3s;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(59,130,246,.4)}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:120px 0 60px;position:relative;
+}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 18px;border-radius:999px;
+  background:rgba(17,24,39,.6);
+  border:1px solid rgba(59,130,246,.2);
+  font-size:.85rem;color:#d1d5db;margin-bottom:24px;
+}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.2)}}
+.hero h1{font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;margin-bottom:20px}
+.hero-role{font-size:clamp(1.1rem,2vw,1.5rem);color:#d1d5db;margin-bottom:18px;font-weight:500}
+.hero-desc{font-size:1.05rem;color:#9ca3af;max-width:560px;margin-bottom:36px}
+.hero-desc .hl{color:#22d3ee;font-weight:600}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:14px 32px;border-radius:999px;
+  font-weight:600;font-size:.95rem;transition:.3s;cursor:pointer;
+}
+.btn-primary{
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);color:#fff;
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 30px rgba(59,130,246,.35)}
+.btn-glass{
+  background:rgba(17,24,39,.6);
+  border:1px solid rgba(59,130,246,.25);color:#fff;
+}
+.btn-glass:hover{border-color:#3b82f6;transform:translateY(-3px)}
+
+.hero-visual{
+  position:relative;width:100%;aspect-ratio:1;max-width:440px;margin:0 auto;
+}
+.hero-visual .box{
+  position:absolute;inset:0;border-radius:24px;
+  background:linear-gradient(135deg,rgba(59,130,246,.18),rgba(6,182,212,.18));
+  border:1px solid rgba(59,130,246,.25);
+}
+.hero-visual .box-inner{
+  position:absolute;inset:28px;border-radius:18px;
+  background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(139,92,246,.1));
+  border:1px solid rgba(59,130,246,.15);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-visual .emoji{font-size:5rem;margin-bottom:16px}
+.hero-visual .title{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700}
+.hero-visual .sub{color:#9ca3af;font-size:.85rem;margin-top:8px}
+
+/* ===== STATS ===== */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:80px;
+}
+.stat{
+  background:rgba(17,24,39,.6);backdrop-filter:blur(12px);
+  border:1px solid rgba(59,130,246,.15);
+  border-radius:18px;padding:28px 20px;text-align:center;transition:.3s;
+}
+.stat:hover{border-color:rgba(59,130,246,.4);transform:translateY(-4px)}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700;margin-bottom:6px}
+.stat-label{color:#9ca3af;font-size:.85rem}
+
+/* ===== SECTIONS ===== */
+section{padding:100px 0;position:relative}
+.section-head{text-align:center;margin-bottom:60px}
+.kicker{
+  color:#22d3ee;font-weight:600;font-size:.8rem;
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;
+}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+.section-head h2 .gradient-text{display:inline}
+
+/* ===== CARDS ===== */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{
+  background:rgba(17,24,39,.6);backdrop-filter:blur(12px);
+  border:1px solid rgba(59,130,246,.15);
+  border-radius:20px;padding:32px;transition:.3s;
+}
+.card:hover{
+  border-color:rgba(59,130,246,.45);
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(59,130,246,.15);
+}
+.card-icon{
+  width:56px;height:56px;border-radius:16px;
+  background:linear-gradient(135deg,#3b82f6,#06b6d4);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:20px;
+}
+.card-icon.purple{background:linear-gradient(135deg,#8b5cf6,#3b82f6)}
+.card-icon.cyan{background:linear-gradient(135deg,#06b6d4,#8b5cf6)}
+.card h3{font-size:1.2rem;font-weight:700;margin-bottom:10px;color:#fff}
+.card p{color:#9ca3af;font-size:.95rem;line-height:1.7}
+.emoji-big{font-size:2.5rem;margin-bottom:16px}
+
+/* ===== PROJECTS ===== */
+.projects-list{display:flex;flex-direction:column;gap:32px}
+.project{
+  background:rgba(17,24,39,.6);backdrop-filter:blur(12px);
+  border:1px solid rgba(59,130,246,.15);
+  border-radius:20px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+  transition:.3s;
+}
+.project:hover{
+  border-color:rgba(59,130,246,.45);
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(59,130,246,.15);
+}
+.project.reverse .project-info{order:2}
+.project.reverse .project-visual{order:1}
+.project-info{padding:44px}
+.project-tags{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.tag{
+  padding:5px 14px;border-radius:999px;font-size:.7rem;
+  font-weight:700;letter-spacing:.5px;
+}
+.tag.blue{background:rgba(59,130,246,.2);color:#60a5fa}
+.tag.cyan{background:rgba(6,182,212,.2);color:#22d3ee}
+.tag.purple{background:rgba(139,92,246,.2);color:#a78bfa}
+.tag.green{background:rgba(74,222,128,.2);color:#4ade80}
+.tag-num{color:#6b7280;font-size:.85rem}
+.project h3{font-size:1.7rem;font-weight:700;color:#fff;margin-bottom:16px}
+.project-desc{color:#9ca3af;font-size:.98rem;margin-bottom:24px;line-height:1.7}
+.project-features{list-style:none;display:flex;flex-direction:column;gap:12px}
+.project-features li{
+  color:#d1d5db;font-size:.92rem;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.project-features li::before{
+  content:"▸";color:#22d3ee;font-weight:700;flex-shrink:0;
+}
+.project-visual{
+  display:flex;align-items:center;justify-content:center;
+  padding:40px;min-height:320px;text-align:center;
+}
+.project-visual.v1{background:linear-gradient(135deg,rgba(59,130,246,.12),rgba(6,182,212,.12))}
+.project-visual.v2{background:linear-gradient(135deg,rgba(6,182,212,.12),rgba(139,92,246,.12))}
+.project-visual.v3{background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(59,130,246,.12))}
+.project-visual.v4{background:linear-gradient(135deg,rgba(59,130,246,.12),rgba(139,92,246,.12))}
+.project-visual.v5{background:linear-gradient(135deg,rgba(74,222,128,.12),rgba(6,182,212,.12))}
+.project-visual .icon{font-size:5rem;margin-bottom:16px}
+.project-visual .v-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:6px;
+}
+.project-visual .v-sub{color:#9ca3af;font-size:.85rem}
+
+/* ===== STACK TAGS ===== */
+.stack-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.stack-tag{
+  padding:5px 12px;border-radius:999px;
+  background:rgba(59,130,246,.12);color:#93c5fd;
+  font-size:.75rem;font-weight:500;
+}
+.stack-tag.cyan{background:rgba(6,182,212,.12);color:#67e8f9}
+.stack-tag.purple{background:rgba(139,92,246,.12);color:#c4b5fd}
+
+/* ===== EDUCATION ===== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.edu-list{display:flex;flex-direction:column;gap:20px}
+.edu-item{
+  background:rgba(17,24,39,.6);backdrop-filter:blur(12px);
+  border:1px solid rgba(59,130,246,.15);
+  border-radius:16px;padding:24px;
+  display:flex;gap:18px;align-items:flex-start;transition:.3s;
+}
+.edu-item:hover{border-color:rgba(59,130,246,.4)}
+.edu-icon{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;flex-shrink:0;
+}
+.edu-icon.blue{background:rgba(59,130,246,.2)}
+.edu-icon.cyan{background:rgba(6,182,212,.2)}
+.edu-icon.purple{background:rgba(139,92,246,.2)}
+.edu-item h4{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:6px}
+.edu-item .meta{color:#22d3ee;font-size:.85rem;margin-bottom:8px}
+.edu-item p{color:#9ca3af;font-size:.9rem;line-height:1.6}
+
+/* ===== CONTACT ===== */
+.contact-box{
+  background:rgba(17,24,39,.7);backdrop-filter:blur(14px);
+  border:1px solid rgba(59,130,246,.2);
+  border-radius:28px;padding:70px 50px;text-align:center;
+  max-width:900px;margin:0 auto;position:relative;overflow:hidden;
+}
+.contact-box h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;margin-bottom:20px}
+.contact-box .sub{color:#9ca3af;font-size:1.05rem;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
+.contact-card{
+  background:rgba(17,24,39,.6);
+  border:1px solid rgba(59,130,246,.15);
+  border-radius:16px;padding:24px;transition:.3s;
+}
+.contact-card:hover{border-color:rgba(59,130,246,.5);transform:translateY(-4px)}
+.contact-card .c-icon{font-size:1.8rem;margin-bottom:12px}
+.contact-card .c-label{color:#9ca3af;font-size:.8rem;margin-bottom:6px}
+.contact-card .c-value{color:#fff;font-size:.9rem;font-weight:600;word-break:break-all}
+
+/* ===== FOOTER ===== */
+footer{
+  padding:36px 0;text-align:center;
+  color:#6b7280;font-size:.85rem;
+  border-top:1px solid rgba(59,130,246,.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero-desc{margin-left:auto;margin-right:auto}
+  .hero-btns{justify-content:center}
+  .hero-visual{max-width:340px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:1fr}
+  .project{grid-template-columns:1fr}
+  .project.reverse .project-info{order:1}
+  .project.reverse .project-visual{order:2}
+  .project-info{padding:32px}
+  .project-visual{min-height:220px;padding:30px}
+  .two-col{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr}
+  .contact-box{padding:50px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <div class="logo gradient-text">FH.</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for Projects
+        </div>
+        <h1>Fares Mohamed<br /><span class="gradient-text">Helal</span></h1>
+        <p class="hero-role">AI &amp; Automation Specialist</p>
+        <p class="hero-desc">
+          Marketing graduate combining technical AI solutions with deep automation expertise to deliver
+          <span class="hl">real business results</span>.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-glass">Contact Me</a>
+          <a href="#" id="resume-btn" class="btn btn-glass">Resume</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="box"></div>
+        <div class="box-inner">
+          <div class="emoji" style="width:80px;height:80px;color:#60a5fa"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/><path d="M3 15h-1"/><path d="M22 15h-1"/></svg></div>
+          <p class="title gradient-text">AI + Automation</p>
+          <p class="sub">Building intelligent systems</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="stat">
+        <p class="stat-num gradient-text">5+</p>
+        <p class="stat-label">Core Projects</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num gradient-text">2024</p>
+        <p class="stat-label">Marketing Graduate</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num gradient-text">100%</p>
+        <p class="stat-label">Client-Focused</p>
+      </div>
+      <div class="stat">
+        <p class="stat-num gradient-text">∞</p>
+        <p class="stat-label">Automation Potential</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Who I Am</p>
+      <h2>Marketing Meets <span class="gradient-text">Technology</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="emoji-big" style="width:44px;height:44px;color:#22d3ee"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+        <h3>Specialist Skills</h3>
+        <p>Specialized in prompt engineering, workflow automation, and computer vision — where creativity meets precision.</p>
+      </div>
+      <div class="card">
+        <div class="emoji-big" style="width:44px;height:44px;color:#22d3ee"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.4 1 1.1 1 1.9v.4h6v-.4c0-.8.4-1.5 1-1.9A7 7 0 0 0 12 2z"/></svg></div>
+        <h3>Client-Focused Impact</h3>
+        <p>Delivering high-impact digital systems built specifically for freelancers and micro-businesses ready to scale.</p>
+      </div>
+      <div class="card">
+        <div class="emoji-big" style="width:44px;height:44px;color:#22d3ee"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Business-First Tech</h3>
+        <p>A marketing perspective informing every technical solution — ensuring real ROI, not just clever code.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERTISE ============ -->
+<section id="expertise">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Core Expertise</p>
+      <h2>What I <span class="gradient-text">Build</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44A2.5 2.5 0 0 1 4.5 17.5 2.5 2.5 0 0 1 2 15a2.5 2.5 0 0 1 1.5-2.3A2.5 2.5 0 0 1 4.5 8 2.5 2.5 0 0 1 7 5.5 2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44A2.5 2.5 0 0 0 19.5 17.5 2.5 2.5 0 0 0 22 15a2.5 2.5 0 0 0-1.5-2.3A2.5 2.5 0 0 0 19.5 8 2.5 2.5 0 0 0 17 5.5 2.5 2.5 0 0 0 14.5 2z"/></svg></div>
+        <h3>AI &amp; Machine Learning</h3>
+        <p>Prompt engineering, LLM evaluation, and neural network training for production-ready intelligent systems.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon cyan" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h3>Automation</h3>
+        <p>n8n workflows, data extraction pipelines, and seamless integration systems that eliminate manual work.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon purple" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Web Development</h3>
+        <p>Interactive tools, financial calculators, and responsive interfaces — built clean and deployed fast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Portfolio</p>
+      <h2>Featured <span class="gradient-text">Projects</span></h2>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- Project 1 -->
+      <div class="project">
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag blue">COMPUTER VISION</span>
+            <span class="tag-num">Project 01</span>
+          </div>
+          <h3>AI Teachable Machine Classifier</h3>
+          <p class="project-desc">
+            A custom-trained neural network built for optical object recognition — deployed live
+            with webcam-based inference for instant categorization.
+          </p>
+          <ul class="project-features">
+            <li>Bottle and pencil classification with high accuracy</li>
+            <li>Live webcam inference — zero latency results</li>
+            <li>Practical, deployable ML without heavy infrastructure</li>
+          </ul>
+        </div>
+        <div class="project-visual v1">
+          <div>
+            <svg width="100%" height="auto" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;margin-bottom:20px">
+<rect x="10" y="10" width="300" height="160" rx="14" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.25)"/>
+<rect x="40" y="35" width="150" height="110" rx="6" fill="rgba(15,23,42,0.6)" stroke="#3b82f6" stroke-width="2"/>
+<ellipse cx="115" cy="95" rx="26" ry="42" fill="rgba(96,165,250,0.35)" stroke="#60a5fa" stroke-width="2"/>
+<rect x="80" y="45" width="70" height="90" rx="4" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="80" cy="45" r="3" fill="#22d3ee"/>
+<circle cx="150" cy="45" r="3" fill="#22d3ee"/>
+<circle cx="80" cy="135" r="3" fill="#22d3ee"/>
+<circle cx="150" cy="135" r="3" fill="#22d3ee"/>
+<rect x="80" y="30" width="66" height="16" rx="4" fill="#22d3ee"/>
+<text x="113" y="42" font-family="monospace" font-size="10" fill="#0a0e1a" text-anchor="middle" font-weight="700">bottle 98%</text>
+<rect x="205" y="45" width="90" height="14" rx="3" fill="rgba(148,163,184,0.4)"/>
+<rect x="205" y="68" width="70" height="14" rx="3" fill="rgba(148,163,184,0.25)"/>
+<rect x="205" y="91" width="80" height="14" rx="3" fill="rgba(148,163,184,0.25)"/>
+<circle cx="30" cy="25" r="5" fill="#4ade80"/>
+</svg>
+            <p class="v-title">Real-Time Inference</p>
+            <p class="v-sub">Webcam → Classification</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project reverse">
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag cyan">WEB APP</span>
+            <span class="tag-num">Project 02</span>
+          </div>
+          <h3>Smart Freelancer Financial Calculator</h3>
+          <p class="project-desc">
+            An interactive financial tool designed to give freelancers complete clarity over their
+            earnings, fees, and monthly goals.
+          </p>
+          <ul class="project-features">
+            <li>Accurate project pricing and profit tracking</li>
+            <li>Net earnings calculated after all commissions and fees</li>
+            <li>Monthly financial goal planning with visual dashboards</li>
+          </ul>
+        </div>
+        <div class="project-visual v2">
+          <div>
+            <svg width="100%" height="auto" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;margin-bottom:20px">
+<rect x="10" y="10" width="300" height="160" rx="14" fill="rgba(6,182,212,0.08)" stroke="rgba(6,182,212,0.25)"/>
+<rect x="30" y="30" width="120" height="20" rx="4" fill="rgba(226,232,240,0.15)"/>
+<text x="35" y="45" font-family="Inter" font-size="12" fill="#67e8f9">Net Earnings</text>
+<text x="30" y="78" font-family="'Space Grotesk'" font-size="26" font-weight="700" fill="#fff">$4,280</text>
+<rect x="30" y="100" width="40" height="50" rx="4" fill="#3b82f6"/>
+<rect x="80" y="80" width="40" height="70" rx="4" fill="#06b6d4"/>
+<rect x="130" y="60" width="40" height="90" rx="4" fill="#22d3ee"/>
+<rect x="180" y="95" width="40" height="55" rx="4" fill="#8b5cf6"/>
+<circle cx="260" cy="55" r="26" fill="none" stroke="#4ade80" stroke-width="4"/>
+<text x="260" y="62" font-family="'Space Grotesk'" font-size="20" font-weight="700" fill="#4ade80" text-anchor="middle">$</text>
+<path d="M235 115 L250 100 L262 112 L285 88" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M275 88 L285 88 L285 98" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <p class="v-title">Pricing Intelligence</p>
+            <p class="v-sub">Net Earnings &amp; Goal Tracking</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag purple">AUTOMATION</span>
+            <span class="tag-num">Project 03</span>
+          </div>
+          <h3>Proposals Automation System</h3>
+          <p class="project-desc">
+            An end-to-end automation system that transforms how freelancers win clients — from
+            first contact to polished proposal, automatically.
+          </p>
+          <ul class="project-features">
+            <li>AI-generated professional proposals tailored to each client</li>
+            <li>Automated task organization and routine workflow optimization</li>
+            <li>Smart marketing logic backed by real marketing expertise</li>
+          </ul>
+        </div>
+        <div class="project-visual v3">
+          <div>
+            <svg width="100%" height="auto" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;margin-bottom:20px">
+<rect x="10" y="10" width="300" height="160" rx="14" fill="rgba(139,92,246,0.08)" stroke="rgba(139,92,246,0.25)"/>
+<rect x="30" y="35" width="60" height="45" rx="10" fill="#3b82f6"/>
+<path d="M30 80 L45 80 L38 92 Z" fill="#3b82f6"/>
+<text x="60" y="62" font-family="Inter" font-size="20" text-anchor="middle">💬</text>
+<path d="M100 58 L145 58" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow3)"/>
+<defs><marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a78bfa"/></marker></defs>
+<rect x="150" y="20" width="70" height="90" rx="8" fill="rgba(15,23,42,0.6)" stroke="#8b5cf6" stroke-width="2"/>
+<rect x="160" y="32" width="50" height="6" rx="2" fill="rgba(226,232,240,0.4)"/>
+<rect x="160" y="45" width="50" height="6" rx="2" fill="rgba(226,232,240,0.3)"/>
+<rect x="160" y="58" width="35" height="6" rx="2" fill="rgba(226,232,240,0.3)"/>
+<rect x="160" y="75" width="50" height="18" rx="4" fill="#8b5cf6"/>
+<text x="185" y="87" font-family="Inter" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">PROPOSAL</text>
+<path d="M235 58 L270 58" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow3b)"/>
+<defs><marker id="arrow3b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4ade80"/></marker></defs>
+<circle cx="285" cy="58" r="20" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="2"/>
+<path d="M277 58 L283 65 L294 50" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <p class="v-title">AI-Powered Proposals</p>
+            <p class="v-sub">Contact → Proposal → Win</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project reverse">
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag blue">INTEGRATION</span>
+            <span class="tag-num">Project 04</span>
+          </div>
+          <h3>n8n Automation Pipeline</h3>
+          <p class="project-desc">
+            A fully integrated end-to-end automation pipeline connecting messaging, AI intelligence,
+            and structured data logging — hands-free.
+          </p>
+          <ul class="project-features">
+            <li>Automated data extraction and categorization at scale</li>
+            <li>OpenAI processing for intelligent content handling</li>
+            <li>Seamless structured output directly into Google Sheets</li>
+          </ul>
+        </div>
+        <div class="project-visual v4">
+          <div>
+            <svg width="100%" height="auto" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;margin-bottom:20px">
+<rect x="10" y="10" width="300" height="160" rx="14" fill="rgba(59,130,246,0.08)" stroke="rgba(59,130,246,0.25)"/>
+<circle cx="55" cy="90" r="30" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2"/>
+<path d="M43 90 L67 78 L58 90 L67 102 Z" fill="#3b82f6"/>
+<text x="55" y="132" font-family="Inter" font-size="10" fill="#93c5fd" text-anchor="middle">Telegram</text>
+<path d="M88 90 L128 90" stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow4a)"/>
+<defs><marker id="arrow4a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#60a5fa"/></marker></defs>
+<rect x="130" y="60" width="60" height="60" rx="12" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="2"/>
+<circle cx="160" cy="82" r="10" fill="none" stroke="#22d3ee" stroke-width="2"/>
+<path d="M150 100 h20 M155 106 h10" stroke="#22d3ee" stroke-width="2" stroke-linecap="round"/>
+<text x="160" y="132" font-family="Inter" font-size="10" fill="#67e8f9" text-anchor="middle">OpenAI</text>
+<path d="M192 90 L232 90" stroke="#4ade80" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arrow4b)"/>
+<defs><marker id="arrow4b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4ade80"/></marker></defs>
+<rect x="235" y="62" width="60" height="56" rx="8" fill="rgba(74,222,128,0.12)" stroke="#4ade80" stroke-width="2"/>
+<line x1="245" y1="76" x2="285" y2="76" stroke="#4ade80" stroke-width="1.5"/>
+<line x1="245" y1="90" x2="285" y2="90" stroke="#4ade80" stroke-width="1.5"/>
+<line x1="245" y1="104" x2="285" y2="104" stroke="#4ade80" stroke-width="1.5"/>
+<line x1="263" y1="66" x2="263" y2="114" stroke="#4ade80" stroke-width="1.5"/>
+<text x="265" y="132" font-family="Inter" font-size="10" fill="#86efac" text-anchor="middle">Sheets</text>
+</svg>
+            <p class="v-title">Telegram → OpenAI → Sheets</p>
+            <p class="v-sub">Hands-Free Pipeline</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 - NEW -->
+      <div class="project">
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="tag green">LANDING PAGE</span>
+            <span class="tag-num">Project 05</span>
+          </div>
+          <h3>High-Converting Landing Page Design</h3>
+          <p class="project-desc">
+            A conversion-optimized landing page designed to turn visitors into leads — combining
+            persuasive copywriting with modern, responsive web design.
+          </p>
+          <ul class="project-features">
+            <li>Conversion-focused layout with strategic CTA placement</li>
+            <li>Mobile-first responsive design across all devices</li>
+            <li>Fast-loading, SEO-friendly structure with modern UI/UX</li>
+            <li>A/B tested sections for maximum engagement and sign-ups</li>
+          </ul>
+        </div>
+        <div class="project-visual v5">
+          <div>
+            <svg width="100%" height="auto" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg" style="max-width:280px;margin-bottom:20px">
+<rect x="10" y="10" width="300" height="160" rx="14" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.25)"/>
+<rect x="35" y="25" width="250" height="130" rx="8" fill="rgba(15,23,42,0.7)" stroke="#4ade80" stroke-width="1.5"/>
+<rect x="35" y="25" width="250" height="22" rx="8" fill="rgba(74,222,128,0.15)"/>
+<circle cx="48" cy="36" r="3" fill="#f87171"/>
+<circle cx="58" cy="36" r="3" fill="#facc15"/>
+<circle cx="68" cy="36" r="3" fill="#4ade80"/>
+<rect x="120" y="65" width="80" height="10" rx="3" fill="rgba(226,232,240,0.5)"/>
+<rect x="105" y="82" width="110" height="7" rx="3" fill="rgba(226,232,240,0.25)"/>
+<rect x="128" y="100" width="64" height="18" rx="9" fill="#4ade80"/>
+<text x="160" y="112" font-family="Inter" font-size="9" font-weight="700" fill="#0a0e1a" text-anchor="middle">SIGN UP</text>
+<rect x="55" y="130" width="60" height="14" rx="4" fill="rgba(96,165,250,0.3)"/>
+<rect x="130" y="130" width="60" height="14" rx="4" fill="rgba(34,211,238,0.3)"/>
+<rect x="205" y="130" width="60" height="14" rx="4" fill="rgba(167,139,250,0.3)"/>
+</svg>
+            <p class="v-title">Conversion-Driven Design</p>
+            <p class="v-sub">Visitors → Leads → Customers</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section id="stack">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker">Technical Stack</p>
+      <h2>Tools &amp; <span class="gradient-text">Technologies</span></h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+        <h3>Automation</h3>
+        <p>n8n, LLM chains, and end-to-end workflow design for scalable, reliable process automation.</p>
+        <div class="stack-tags">
+          <span class="stack-tag">n8n</span>
+          <span class="stack-tag">LLM Chains</span>
+          <span class="stack-tag">Workflows</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon cyan" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44A2.5 2.5 0 0 1 4.5 17.5 2.5 2.5 0 0 1 2 15a2.5 2.5 0 0 1 1.5-2.3A2.5 2.5 0 0 1 4.5 8 2.5 2.5 0 0 1 7 5.5 2.5 2.5 0 0 1 9.5 2z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44A2.5 2.5 0 0 0 19.5 17.5 2.5 2.5 0 0 0 22 15a2.5 2.5 0 0 0-1.5-2.3A2.5 2.5 0 0 0 19.5 8 2.5 2.5 0 0 0 17 5.5 2.5 2.5 0 0 0 14.5 2z"/></svg></div>
+        <h3>AI &amp; ML</h3>
+        <p>Prompt engineering, Google Teachable Machine, and computer vision for intelligent systems.</p>
+        <div class="stack-tags">
+          <span class="stack-tag cyan">Prompt Engineering</span>
+          <span class="stack-tag cyan">Computer Vision</span>
+          <span class="stack-tag cyan">Teachable Machine</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon purple" style="color:#fff"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript — responsive UI/UX interfaces built for clarity and performance.</p>
+        <div class="stack-tags">
+          <span class="stack-tag purple">HTML</span>
+          <span class="stack-tag purple">CSS</span>
+          <span class="stack-tag purple">JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION & WORK ============ -->
+<section>
+  <div class="container">
+    <div class="two-col">
+
+      <div>
+        <p class="kicker">Certifications &amp; Education</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:32px">
+          Background &amp; <span class="gradient-text">Credentials</span>
+        </h2>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-icon blue" style="color:#60a5fa"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg></div>
+            <div>
+              <h4>Bachelor of Marketing</h4>
+              <p class="meta">British University in Egypt — Class of 2024</p>
+              <p>Business-first perspective informing every technical solution.</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon cyan" style="color:#22d3ee"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-2"/><path d="M15 3H8a2 2 0 0 0-2 2v14"/><path d="M9 3v18"/></svg></div>
+            <div>
+              <h4>DEPI &amp; NTN Program</h4>
+              <p>Certified in Digital Marketing Automation and Advanced Workflow design for enterprise-grade pipelines.</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon purple" style="color:#a78bfa"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div>
+              <h4>AI Ambassador Program</h4>
+              <p>Community leadership and AI advocacy — driving adoption and education across emerging tech communities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="kicker">Current Work</p>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:32px">
+          What I'm <span class="gradient-text">Doing Now</span>
+        </h2>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-icon blue" style="color:#60a5fa"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41L11 3.83A2 2 0 0 0 9.59 3.17L4 3a1 1 0 0 0-1 1l.17 5.59a2 2 0 0 0 .66 1.41l9.58 9.58a2 2 0 0 0 2.83 0l4.35-4.35a2 2 0 0 0 0-2.82z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div>
+            <div>
+              <h4>AI Data Annotator &amp; Evaluator</h4>
+              <p>Active across multiple global platforms — curating and quality-assuring training data for leading AI systems.</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon cyan" style="color:#22d3ee"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+            <div>
+              <h4>Model Benchmarking</h4>
+              <p>Benchmarking generative AI models with rigorous safety alignment testing to ensure responsible outputs.</p>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon purple" style="color:#a78bfa"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+              <h4>Adversarial Evaluation</h4>
+              <p>Authoring adversarial prompts and reinforcement learning evaluations that push model robustness to its limits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <p class="kicker">Get in Touch</p>
+      <h2>Ready to Transform Your Ideas Into <span class="gradient-text">Intelligent Solutions?</span></h2>
+      <p class="sub">I'm eager to connect and discuss how my expertise can drive your success.</p>
+
+      <div class="contact-grid">
+        <a href="tel:+201068880863" class="contact-card">
+          <div class="c-icon" style="width:32px;height:32px;color:#60a5fa;margin:0 auto 12px"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <p class="c-label">Call Me</p>
+          <p class="c-value">+20 106 888 0863</p>
+        </a>
+        <a href="mailto:faresm@faresmohamed.com" class="contact-card">
+          <div class="c-icon" style="width:32px;height:32px;color:#22d3ee;margin:0 auto 12px"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></div>
+          <p class="c-label">Email</p>
+          <p class="c-value">faresm@faresmohamed.com</p>
+        </a>
+        <a href="https://www.linkedin.com/in/fares-mohamed-helal-24a00a1b4" target="_blank" class="contact-card">
+          <div class="c-icon" style="width:32px;height:32px;color:#a78bfa;margin:0 auto 12px"><svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <p class="c-label">LinkedIn</p>
+          <p class="c-value">Connect with me</p>
+        </a>
+      </div>
+
+      <p style="color:#6b7280;font-size:.85rem">
+        © 2025 Fares Mohamed Helal — AI &amp; Automation Specialist
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Built with 💙 by Fares Helal
+  </div>
+</footer>
+
+
+<script>
+const RESUME_B64 = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgaHR0cDovL3d3dy5yZXBvcnRsYWIuY29tCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZE9ibGlxdWUgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YzIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNSAwIG9iago8PAovQ29udGVudHMgOSAwIFIgL01lZGlhQm94IFsgMCAwIDU5NS4yNzU2IDg0MS44ODk4IF0gL1BhcmVudCA4IDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgOCAwIFIgL1R5cGUgL0NhdGFsb2cKPj4KZW5kb2JqCjcgMCBvYmoKPDwKL0F1dGhvciAoXChhbm9ueW1vdXNcKSkgL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MDgyNjEzNTIyNiswMCcwMCcpIC9DcmVhdG9yIChcKHVuc3BlY2lmaWVkXCkpIC9LZXl3b3JkcyAoKSAvTW9kRGF0ZSAoRDoyMDI2MDgyNjEzNTIyNiswMCcwMCcpIC9Qcm9kdWNlciAoUmVwb3J0TGFiIFBERiBMaWJyYXJ5IC0gd3d3LnJlcG9ydGxhYi5jb20pIAogIC9TdWJqZWN0IChcKHVuc3BlY2lmaWVkXCkpIC9UaXRsZSAoXChhbm9ueW1vdXNcKSkgL1RyYXBwZWQgL0ZhbHNlCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9Db3VudCAxIC9LaWRzIFsgNSAwIFIgXSAvVHlwZSAvUGFnZXMKPj4KZW5kb2JqCjkgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggMjQ1MQo+PgpzdHJlYW0KR2IiLyc/JCMhYig0R1hZRU0jI1k8aFFfQms5RV5CJHAwUF0mbmFHL0dZcjhYUmIzb3JRQlMxXUlmKDBXMk0iUkZddE5bNElkIVJXJWJSKW1yQXMrSkguOWo7QkUoRk1kRHE+NFM5cz5tJ0pATW5ab1NvSEJHLyZWai4wNzdnJHUnISsxO0IraTtkZlM3YSNSb19rJ0BNaHQtXVgwIiQ6O1ZyLXApPi5xZ2doS0F1UFEiImEqXVVpOV1EayFUOl5oXDU1clcpXTFRbD4uX2xjQlVcMDdPa2EtWUc5KGJwVkk3OCRkXVtWc25tO3MkazkzYSs8UDhyOWUoXEdyc1pNIjdTQGJRSWkwPW4+cSRSPDgycj9YWzE7JTtsZXBgPyU1REloVSEpRT5HczlGZFRDK01COjouWC8xSSFRTUdAaDMsRjQvMzlGSTk5OiFPdTdPK2klN11YUWpYTz85IiNPU3I1M0snai0taldMS2VIT2REUSIqNUVbST4+KkNmSDZjKXBCUjgpVTdTXW1PSlFFYTFnK1s5OWs4ZjRyY0FzTkNTIi9Da2xZNCdic0xAJ2I8MitgUV5RM1AoSmUpdSthREJBRHQiSzUmTkJrdSJJcT4lLUI1KGxiT2BqI2MxTFI5MW8kUHBxMFs6dGMlREFWbXJlPmZaQiNJXnJgdDBrZilbJzY0UFJYKkY1KSR1WyFOJGltb0ZvTHBjYChKKVpRZGBZIW9kblEhdUoiYz10WkMtYGVeZVJPJVNnTXRiL3FRc3ErcCNlKztpMGk/Lj4jPyQ4QTErRVtFTGk0I1gmSCdwbExET11IZ0JJdDkpS15TKSJpXFZkPUE2JE1IKVYwVC5bZV9EVz4zSjJDZk43ZzFSQmdsJEQ8czdrL0g+Lk1eRyc6WHAhJnBDYUNpP28tPzgxJ1VnMyVIIXFsUVElZDsoOz1LMUU2TCQrdThrSDlYZFFDXUcwSk0vYigmND5LYTBWRkhGcSRyUD1xWmA7aklQRzIwSWRcJDAjPCRMTW1aWmhSdCRZVj8jTS0zTmJXRmVuXyZKTzNCIjVrQGJFVjNPdG1aPEZeL29ZMT1tXWJUP1VYbjFOITlhK0BYNj1CYi1jZGw/U3Q+NjRBKWZlJ1hWa25XPjBZNWlXLV1qKG4/MlVpT2dhU2dQSmBDcEchLzMlMF1RTVcjMT4iXj8kQj0yQG5aXUZsWzNyRCRJKWJpYjQ9MT4iUVQvQnNTYkFVQjRPSSg5clJmbTsrLlJgcDZUZ0QvMnU/V1dIV2wvWjs5Mz07SEMzNWVHPjUtQSMzRFNxP2UlTWcoUD8jY0dpajczOjdxVixcbSxWIzhaRVZbPSRtZVltKVcnZkc6SFxoZSwlSkhfbD0sSWUibGBtUFYlWFdQWkk3UzZfUFgxTEpRL2pxN0NzOidqTXJuJFZabURfQGowSTBraSRkYy0xOnQ1bjFVLlJdLSlYUXVJWj5jdUs0PzJMai5DVT84blVpKDszamRqYkMmalouLjVyQVk6YUxfXVBgXlYvKFVUKiFxTSZzbig3Ql0qVmdRJy9QTEdjTDpPZChhcyYvJUk7MkkjJzJFZ2FYZWQ4NidyQm9fLW1eJ0M7L1dhJCJnOUJaIV08cWA7LVVdcWIjMDs7O0lVcjsvQFkzLD1IcnFsKVdqN1Y5QU9MW0NWMTJ1RmknUUNIOk9RJ1s/XjomPGMrRkpzLG5aM2E+SUJNMitqUDJgTFgjXjJiJCZIYEE9W2BhMUk/JlVpZlk+VXRxbVxTNmF1OERSMDtOSlQldSRtPmFFcDM/YmpBVzdoPD4iYz1yRiJ1dFBpKDk4JEQiP2onLUtHSTp1L1FTQVRrN2k0Vkg7M20qQyRxZSpAOy40OmlYTTJOV1E4VG89Jiw9RUtkQlV1RHJKZmNYXVQhbkouZXBORzhoISVRckNpJzxrYV84bUdKb3RhTCxsPy9HKVIsM0pFYVpzMi5HbUhBLUlxVTcoMjk7VEpRT1tuKjEqVlBlW3M6XCp1LkpiaUNBXS1wVVxbVSRfWDRxTz5kUUM6OylRayk2MWhITlY3QVNyLjY3TW9Ebj11dT1EKDRUVCc3JFBxdW5uIS0rbWVuYTFHYGw8PmZIYGcqZSd1VShPUTo3a0RwJDpnWCRqaUFEJ0RNUk9ZYks1cmgqIiJFPVpAXFhrYWUvW2FdMTdNKUdwQVImZjVWM2Q4L0I3Rks1IWFqaEEhQV5mLzdNJGtgMS9rRGEiLyFfJjYuUztLUjpwYWdZWDBhZEo7VDIsMnBiIktDbEVOXmFGY1RrSD4pPGg3Z1xiU3BYZEpSWUoiMSwmRGFDY2VyZGBnK105JEc0QWk5TkIyclwmLUNeT1NnKDMqT3NdaDdnSiQkSW1ZTHBiXiM+JztiOk0xa01pUV0pOmwhSDM4N203ZGIvPixwVVhCRmVKMWc3PlJAUlZXTVo7OTdQIWdbUV0xSjpwZDFEZCFMTzgoM0NcYFF1VD8iTjAvLzBNYjomPmVQSnRGK2pAKzVjVWpAUTw8L2xNX01KMUttWW9ALydMcWhSXlZBbWVgNUVXKW1vKjNhcyE7UTsnR0NjMjtNalU1PzQoSidsVVxUVExJbyRtOj5gLj0qS3NNZUJEOCFUVUJxR11uKV9TZHA8J2Y2MzsvIlZQdVM9QFRMNVtOTy1hVydXQEtzcD0jdGkxM0Y3V0xhTW9ySjQmSENfZ25eRVZNLGozQDgjJyMzMGM/bTQzXkg7RDg0XzhBUz42U2YwaDIvb0M0Wj1yUkQmTzFdK2lFW2RPLz80InJVUGRRN2pMLz0sZVZRJypaOmRLPDdTP3JeS2U0UTRcaihaOWcxJFhNSi1ZKUNYZHExT15PcGl0JS5lRjUhLiJwYUdhOW9bK0NwTHFpWy5QJCk7QzpDT19cSkdTK3JZKEEzMVs7NFxIJWwqS0kjKjRUY2dfSTkqXWxSYjtHNmMwQllLYi5qMzhTUWkwYGgoZmNtXGBeLkByMilTbEkwYl1lU0NpZWRdR3JjZGVdZ1V1TnJbZUhZUzw5KTBmJC9QTT9TXXUmNEQ8aTkpaUo0b0BybXM0MXE1S1QtIyglb29JPDlhUWUxNF40Y2RAXC5hKGxhUF0zUDJER0s/b2tuc1RQMSI3Rkk2WzpkS2ppWzJySmJdN29ebm0vaUxSNjdLPl4yUTEpU1tfTzsnYFZKVDNpc0BfLVtUVkxIQk9YL0g4XnRUcFYrTFxXZm8nIjEtc1spP2ZudT1vY0wicW4sPEElU01tNX4+ZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgMTAKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDczIDAwMDAwIG4gCjAwMDAwMDAxMjQgMDAwMDAgbiAKMDAwMDAwMDIzMSAwMDAwMCBuIAowMDAwMDAwMzQzIDAwMDAwIG4gCjAwMDAwMDA0NjIgMDAwMDAgbiAKMDAwMDAwMDY2NSAwMDAwMCBuIAowMDAwMDAwNzMzIDAwMDAwIG4gCjAwMDAwMDEwMTYgMDAwMDAgbiAKMDAwMDAwMTA3NSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9JRCAKWzxhNjQ1NmQ4Y2VmYjcyMTJjY2E0MzdlMjc5ODlhZmMxMT48YTY0NTZkOGNlZmI3MjEyY2NhNDM3ZTI3OTg5YWZjMTE+XQolIFJlcG9ydExhYiBnZW5lcmF0ZWQgUERGIGRvY3VtZW50IC0tIGRpZ2VzdCAoaHR0cDovL3d3dy5yZXBvcnRsYWIuY29tKQoKL0luZm8gNyAwIFIKL1Jvb3QgNiAwIFIKL1NpemUgMTAKPj4Kc3RhcnR4cmVmCjM2MTcKJSVFT0YK";
+function b64ToBlob(b64Data, contentType) {
+  const byteChars = atob(b64Data);
+  const byteNumbers = new Array(byteChars.length);
+  for (let i = 0; i < byteChars.length; i++) {
+    byteNumbers[i] = byteChars.charCodeAt(i);
+  }
+  const byteArray = new Uint8Array(byteNumbers);
+  return new Blob([byteArray], { type: contentType });
+}
+
+document.getElementById('resume-btn').addEventListener('click', async (e) => {
+  e.preventDefault();
+  let usedCapability = false;
+  try {
+    if (window.claude && typeof window.claude.use === 'function') {
+      const downloads = await window.claude.use('downloads');
+      if (downloads) {
+        const blob = b64ToBlob(RESUME_B64, 'application/pdf');
+        await downloads.save({ filename: 'Fares_Elmetwaly_Resume.pdf', data: blob });
+        usedCapability = true;
+      }
+    }
+  } catch (err) {
+    usedCapability = false;
+  }
+  if (usedCapability) return;
+  // Fallback: open the PDF directly (data URI) in a new tab so the device's
+  // own PDF viewer (with its native Share/Save icon) can handle it.
+  const dataUri = 'data:application/pdf;base64,' + RESUME_B64;
+  const win = window.open(dataUri, '_blank');
+  if (!win) {
+    // Popup blocked: navigate the current tab instead.
+    window.location.href = dataUri;
+  }
+});
+</script>
+</body>
+</html>
